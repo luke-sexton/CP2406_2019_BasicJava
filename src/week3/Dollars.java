@@ -8,7 +8,7 @@ public class Dollars {
         int newAmount;
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Please enter amount of dollars and cents: ");
+        System.out.print("Please enter the amount: ");
         amount = input.nextInt();
 
         int twentiesCalculation = amount / 20;
