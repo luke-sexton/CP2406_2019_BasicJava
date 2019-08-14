@@ -1,3 +1,5 @@
+package week2;
+
 class Dog {
 
     String name;
