@@ -1,6 +1,6 @@
 package week3;
 
-public class InchesToFeet {
+class InchesToFeet {
     int inches = 86;
     int footCalculation = inches / 12;
     int remainingInches = inches % 12;

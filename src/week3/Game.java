@@ -2,7 +2,7 @@ package week3;
 
 import java.util.Random;
 
-public class Game {
+class Game {
     int count;
     int wins;
     private Random random = new Random();
