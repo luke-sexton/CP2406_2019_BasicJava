@@ -5,8 +5,7 @@ import java.util.Random;
 class Game {
     int count;
     int wins;
-    private Random random = new Random();
-    int secret = random.nextInt(10) + 1; // secret is assigned a random value between 1 - 10
+    int secret;
 
     void makeGuess(int value) {
         count += 1;
