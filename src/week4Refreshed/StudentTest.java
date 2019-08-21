@@ -11,6 +11,7 @@ class StudentTest {
         double creditHours = student.getCreditHours();
         double pointsEarned = student.getPointsEarned();
 
+        System.out.println("-- Student --");
         System.out.println(id);
         System.out.println(creditHours);
         System.out.println(pointsEarned);
@@ -21,6 +22,21 @@ class StudentTest {
         Student student = new Student(2, 5, 10);
 
         double gpa = student.calculateGpa();
-        System.out.println("GPA: " + gpa);
+        System.out.println("-- Calculate GPA --");
+        System.out.println(gpa);
+    }
+
+    @Test
+    void initialiser() {
+        Student student = new Student();
+
+        int id = student.getId();
+        double creditHours = student.getCreditHours();
+        double pointsEarned = student.getPointsEarned();
+        System.out.println("-- Initialiser --");
+        System.out.println(id);
+        System.out.println(creditHours);
+        System.out.println(pointsEarned);
+
     }
 }
