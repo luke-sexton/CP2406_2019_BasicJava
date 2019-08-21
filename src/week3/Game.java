@@ -7,15 +7,21 @@ class Game {
     int wins;
     int secret;
 
+    // Initial-Value Constructor
+    public Game(int min, int max) {
+        Random random = new Random();
+        this.secret = min + random.nextInt(max - min); // secret is assigned a random value between 1 - 10
+    }
+
     void makeGuess(int value) {
         count += 1;
-        System.out.print("The number is " + secret + " ");
+        System.out.println("The number is " + secret + " ");
 
         if (value == secret) {
             wins += 1;
-            System.out.print("You won!");
+            System.out.println("You won!");
         } else {
-            System.out.print("You lost!");
+            System.out.println("You lost!");
         }
     }
 }
