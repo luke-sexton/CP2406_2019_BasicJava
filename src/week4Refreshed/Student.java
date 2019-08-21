@@ -11,6 +11,12 @@ public class Student {
         setPointsEarned(pointsEarned);
     }
 
+    public Student() {
+       this.id = 9999;
+       this.creditHours = 3;
+       this.pointsEarned = 12;
+    }
+
     // Setter Methods
     public void setId(int value) {
         this.id = value;
