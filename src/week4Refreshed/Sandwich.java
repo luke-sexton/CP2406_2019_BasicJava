@@ -13,24 +13,24 @@ public class Sandwich {
 
     // Setter Methods
     public void setMainIngredient(String value) {
-        mainIngredient = value;
+        this.mainIngredient = value;
     }
     public void setPrice(double value) {
-        price = value;
+        this.price = value;
     }
     public void setBreadType(String value) {
-        breadType = value;
+        this.breadType = value;
     }
 
 
     // Getter Methods
     public String getMainIngredient() {
-        return mainIngredient;
+        return this.mainIngredient;
     }
     public double getPrice() {
-        return price;
+        return this.price;
     }
     public String getBreadType() {
-        return breadType;
+        return this.breadType;
     }
 }
