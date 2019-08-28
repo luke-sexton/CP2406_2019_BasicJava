@@ -60,6 +60,11 @@ public class condoSales {
             System.out.println("View: " + view);
             System.out.println("Cost with garage: " + condominiumPrice);
         }
+        else if (userChoice == 2) {
+            System.out.println("Parking Space has been selected..");
+            System.out.println("View: " + view);
+            System.out.println("Cost: " + condominiumPrice);
+        }
         else {
             System.out.println("No garage selected..");
             System.out.println("View: " + view);
