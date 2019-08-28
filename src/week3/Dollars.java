@@ -4,26 +4,28 @@ import java.util.Scanner;
 
 public class Dollars {
     public static void main(String[] args) {
-        int amount;
-        int newAmount;
         Scanner input = new Scanner(System.in);
+
+        int amount;
+        int remainder;
 
         System.out.print("Please enter the amount: ");
         amount = input.nextInt();
 
-        int twentiesCalculation = amount / 20;
-        System.out.print("Number of 20s: " + twentiesCalculation + "\n");
-        newAmount = amount - (twentiesCalculation * 20);
+        remainder = amount % 20;
+        int twenties = (amount - remainder) / 20;
+        amount = remainder;
 
-        int tensCalculation = newAmount / 10;
-        System.out.print("Number of 10s: " + tensCalculation + "\n");
-        newAmount -= (tensCalculation * 10);
+        remainder = amount % 10;
+        int tens = (amount - remainder) / 10;
+        amount = remainder;
 
-        int fivesCalculation = newAmount / 5;
-        System.out.print("Number of 05s: " + fivesCalculation + "\n");
-        newAmount -= (fivesCalculation * 5);
+        remainder = amount % 5;
+        int fives = (amount - remainder) / 5;
+        amount = remainder;
 
-        System.out.print("Number of 01s: " + newAmount);
+        int ones = amount;
 
+        System.out.print("Number of 20s: " + twenties + "\nNumber of 10s: " + tens + "\nNumber of 05s: " + fives + "\nNumber of 01s: " + ones + "\n");
     }
 }
