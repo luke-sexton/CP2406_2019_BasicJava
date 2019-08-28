@@ -26,6 +26,5 @@ public class AscendingAndDescending {
         // Reverse order of list array
         Collections.reverse(Arrays.asList(numArray)); //
         System.out.println("Descending Order: " + Arrays.toString(numArray));
-
     }
 }
