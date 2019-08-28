@@ -6,7 +6,7 @@ public class condoSales {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int condominiumPrice;
-        String view = "";
+        String view;
 
         String park = "Park";
         int parkCost = 150000;
