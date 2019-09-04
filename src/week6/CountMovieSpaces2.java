@@ -20,6 +20,6 @@ public class CountMovieSpaces2 {
                 spacesCount += 1;
             }
         }
-        System.out.println("Amount of spaces in favourite movie quote: "+ userQuote + " = " + spacesCount);
+        System.out.println("Amount of spaces in favourite movie quote: " + userQuote + " = " + spacesCount);
     }
 }
