@@ -1,6 +1,6 @@
 package week6;
 
-public class countMovieSpaces {
+public class CountMovieSpaces {
     public static void main(String[] args) {
         String favouriteMovie = "This is my favourite movie quote";
         int length = favouriteMovie.length();
