@@ -15,4 +15,10 @@ public class RaceHorse extends Horse {
     public void setCompletedRaces(int completedRaces) {
         this.completedRaces = completedRaces;
     }
+
+    public void display() {
+        String space = " ";
+        System.out.println("RaceHorse: " + this.name + space + this.colour + space + this.birth + space + this.year
+                + space + "\nRaces Won: " + getCompletedRaces());
+    }
 }

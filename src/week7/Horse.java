@@ -45,4 +45,8 @@ public class Horse {
         this.year = year;
     }
 
+    public void display() {
+        String space = " ";
+        System.out.println("General Horse: " + getName() + space + getColour() + space + getBirth() + space + getYear());
+    }
 }
