@@ -28,7 +28,7 @@ public class DemoItemsAndPets {
 
 
     }
-    public static StringBuilder invoiceDescription(ItemSold item) {
+    private static StringBuilder invoiceDescription(ItemSold item) {
         String newLine = "\n";
         StringBuilder invoice = new StringBuilder();
         invoice.append("Invoice Number: ").append(item.getInvoiceNumber()).append(newLine)
@@ -37,7 +37,7 @@ public class DemoItemsAndPets {
         return invoice;
     }
 
-    public static StringBuilder petDescription(PetSold pet) {
+    private static StringBuilder petDescription(PetSold pet) {
         String newline = "\n";
         StringBuilder petInvoice = new StringBuilder();
         petInvoice.append("Vaccinated: ").append(pet.getVaccinationStatus()).append(newline)
