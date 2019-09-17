@@ -1,8 +1,8 @@
 package week7;
 
 public class Poem {
-    String name;
-    int totalLineNumbers;
+    protected String name;
+    private int totalLineNumbers;
 
     public Poem(String name, int totalLineNumbers) {
         setName(name);
