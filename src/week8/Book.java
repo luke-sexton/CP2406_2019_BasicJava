@@ -4,10 +4,9 @@ public abstract class Book {
     String bookTitle;
     double bookPrice;
 
-    public Book(String title) { bookTitle = title;
+    public Book(String title) {
+        bookTitle = title;
     }
-
-
 
     public String getBookTitle() {
         return bookTitle;
