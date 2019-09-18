@@ -1,9 +1,9 @@
 package week8;
 
 public class Participant {
-    String name;
-    String streetAddress;
-    int age;
+    private String name;
+    private String streetAddress;
+    private int age;
 
     public Participant(String name, String streetAddress, int age) {
         this.name = name;
@@ -17,5 +17,6 @@ public class Participant {
 
     public boolean equals(Participant otherParticipant) {
         return this.toString().equals(otherParticipant.toString());
+
     }
 }

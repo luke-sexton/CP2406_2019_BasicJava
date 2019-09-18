@@ -1,7 +1,7 @@
 package week8;
 
 public abstract class Book {
-    String bookTitle;
+    private String bookTitle;
     double bookPrice;
 
     public Book(String title) {

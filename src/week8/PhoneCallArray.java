@@ -6,9 +6,8 @@ public class PhoneCallArray {
         int phoneCallMinutes = 5;
         for (int i = 0; i < phoneCalls.length; ++i) {
             if (i % 2 == 0) {
-                phoneCalls[i] = new OutgoingPhoneCall("0427 428 447",  phoneCallMinutes);
-            }
-            else {
+                phoneCalls[i] = new OutgoingPhoneCall("0427 428 447", phoneCallMinutes);
+            } else {
                 phoneCalls[i] = new IncomingPhoneCall("0485 603 218");
             }
             phoneCallMinutes += 1;

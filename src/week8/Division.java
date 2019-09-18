@@ -8,5 +8,6 @@ public abstract class Division {
         this.name = name;
         this.accountNumber = accountNumber;
     }
+
     abstract void display();
 }

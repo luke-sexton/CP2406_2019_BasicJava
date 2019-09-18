@@ -1,7 +1,8 @@
 package week8;
 
 public class DomesticDivision extends Division {
-    String state;
+    private String state;
+
     public DomesticDivision(String name, int accountNumber, String state) {
         super(name, accountNumber);
         this.state = state;

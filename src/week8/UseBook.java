@@ -9,6 +9,7 @@ public class UseBook {
         displayBook(nonFictionBook);
 
     }
+
     private static void displayBook(Book book) {
         System.out.println(book.getBookTitle() + ": $" + book.getBookPrice());
     }

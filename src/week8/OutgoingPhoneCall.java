@@ -1,7 +1,7 @@
 package week8;
 
 public class OutgoingPhoneCall extends PhoneCall {
-    int phoneCallMinutes;
+    private int phoneCallMinutes;
 
     public OutgoingPhoneCall(String number, int phoneCallMinutes) {
         super(number);
@@ -26,6 +26,6 @@ public class OutgoingPhoneCall extends PhoneCall {
     @Override
     public void displayInformation() {
         System.out.println("\nPhone Number: " + super.phoneNumber + "\nRate Per Minute: " + callPrice +
-                        "\nNumber of Minutes: " + phoneCallMinutes + "\nPrice of the call: " + callPrice * phoneCallMinutes);
+                "\nNumber of Minutes: " + phoneCallMinutes + "\nPrice of the call: " + callPrice * phoneCallMinutes);
     }
 }

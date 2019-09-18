@@ -19,6 +19,7 @@ public class TwoEventParticipants {
             }
         }
     }
+
     public static void createParticipantArray(Participant[] array) {
         Scanner input = new Scanner(System.in);
         for (int i = 0; i < array.length; ++i) {

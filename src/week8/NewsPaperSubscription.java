@@ -2,8 +2,8 @@ package week8;
 
 public abstract class NewsPaperSubscription {
     protected String name;
-    protected String address;
-    protected double rate;
+    String address;
+    private double rate;
 
 
     public String getAddress() {

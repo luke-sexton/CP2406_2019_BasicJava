@@ -8,8 +8,7 @@ public class BookArray {
         for (int i = 0; i < bookArray.length; ++i) {
             if (i % 2 == 0) {
                 bookArray[i] = new Fiction("Fiction Book");
-            }
-            else {
+            } else {
                 bookArray[i] = new NonFiction("Non Fiction Book");
             }
         }
