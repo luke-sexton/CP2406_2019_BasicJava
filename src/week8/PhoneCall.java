@@ -12,9 +12,9 @@ public abstract class PhoneCall {
         callPrice = value;
     }
 
-    public abstract void getPhoneNumber();
+    public abstract String getPhoneNumber();
 
-    public abstract void getCallPrice();
+    public abstract double getCallPrice();
 
     public abstract void displayInformation();
 }
