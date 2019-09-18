@@ -18,6 +18,6 @@ public class IncomingPhoneCall extends PhoneCall {
 
     @Override
     public void displayInformation() {
-        System.out.println("\nPhone Number: " + super.phoneNumber + "\nRate Per Minute: " + callPrice + "\nPrice of the call: " + callPrice );
+        System.out.println("\nPhone Number: " + super.phoneNumber + "\nRate Per Call: " + callPrice + "\nPrice of the call: " + callPrice );
     }
 }
