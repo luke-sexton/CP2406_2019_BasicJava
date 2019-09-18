@@ -3,8 +3,6 @@ package week8;
 public class BookArray {
     public static void main(String[] args) {
         Book[] bookArray = new Book[10];
-        double fictionBook = 24.99;
-        double nonFictionBook = 37.99;
 
         // Fill book array with assorted books
         for (int i = 0; i < bookArray.length; ++i) {
