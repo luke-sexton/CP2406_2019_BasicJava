@@ -3,14 +3,12 @@ package week7;
 public class Horse {
     String name;
     String colour;
-    String birth;
-    int year;
+    int birthYear;
 
-    public Horse(String name, String colour, String birth, int year) {
+    public Horse(String name, String colour, int birthYear) {
         setName(name);
         setColour(colour);
-        setBirth(birth);
-        setYear(year);
+        setBirthYear(birthYear);
     }
 
     public String getName() {
@@ -29,24 +27,16 @@ public class Horse {
         this.colour = colour;
     }
 
-    public String getBirth() {
-        return birth;
+    public int getBirthYear() {
+        return birthYear;
     }
 
-    public void setBirth(String birth) {
-        this.birth = birth;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
     }
 
     public void display() {
         String space = " ";
-        System.out.println("General Horse: " + getName() + space + getColour() + space + getBirth() + space + getYear());
+        System.out.println("General Horse: " + getName() + space + getColour() + space + getBirthYear());
     }
 }

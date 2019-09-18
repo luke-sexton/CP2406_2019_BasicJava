@@ -3,8 +3,8 @@ package week7;
 public class RaceHorse extends Horse {
     private int completedRaces;
 
-    public RaceHorse(String name, String colour, String birth, int year, int completedRaces) {
-        super(name, colour, birth, year);
+    public RaceHorse(String name, String colour, int birthYear, int completedRaces) {
+        super(name, colour, birthYear);
         setCompletedRaces(completedRaces);
     }
 
@@ -18,7 +18,7 @@ public class RaceHorse extends Horse {
 
     public void display() {
         String space = " ";
-        System.out.println("RaceHorse: " + this.name + space + this.colour + space + this.birth + space + this.year
-                + space + "\nRaces Won: " + getCompletedRaces());
+        System.out.println("RaceHorse: " + this.name + space + this.colour + space + this.birthYear + space +
+                "\nRaces Won: " + getCompletedRaces());
     }
 }
