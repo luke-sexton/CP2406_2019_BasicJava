@@ -6,6 +6,7 @@ public abstract class Book {
 
     public Book(String title) {
         bookTitle = title;
+        setBookPrice();
     }
 
     public String getBookTitle() {
