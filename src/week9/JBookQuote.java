@@ -16,6 +16,7 @@ public class JBookQuote extends JFrame {
 
         add(quote);
     }
+
     public static void main(String[] args) {
         JBookQuote frame = new JBookQuote();
     }
