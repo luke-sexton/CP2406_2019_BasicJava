@@ -13,6 +13,7 @@ public class JCapitals extends JFrame implements ListSelectionListener {
     private String[] countries = {"America", "Australia", "Brazil", "Canada", "France", "Hungary", "Malaysia"};
     private JList<String> countryListBox = new JList<>(countries);
     private Map<String, String> countryCapitalMap = new HashMap<>();
+    private JPanel jPanel = new JPanel();
     private JLabel selectionLabel = new JLabel();
 
 
@@ -22,7 +23,6 @@ public class JCapitals extends JFrame implements ListSelectionListener {
         setLayout(new FlowLayout());
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        JPanel jPanel = new JPanel();
 
         add(jPanel);
         jPanel.add(countryListBox);
@@ -43,7 +43,7 @@ public class JCapitals extends JFrame implements ListSelectionListener {
         if (countryCapitalMap.containsKey(countryListBox.getSelectedValue())) {
             selectionLabel.setText("Country Selected: " + countryListBox.getSelectedValue() +
                     " -- Capital City: " + countryCapitalMap.get(countryListBox.getSelectedValue()));
-            add(selectionLabel, FlowLayout.CENTER);
+            jPanel.add(selectionLabel, FlowLayout.CENTER);
         }
         revalidate();
         repaint();
