@@ -10,7 +10,7 @@ public class JPizza extends JFrame implements ItemListener {
     private final int WIDTH = 400;
     private final int HEIGHT = 300;
     private String[] sizes = {"Sizes", "S", "M", "L", "XL"};
-    private String[] toppings = {"Toppings", "Cheese", "Olives", "Jelly", "Sugar"};
+    private String[] toppings = {"Toppings", "Cheese", "Olives", "Jelly", "Sugar", "Chocolate"};
     private JComboBox<String> sizesComboBox = new JComboBox<>(sizes);
     private JComboBox<String> toppingsComboBox = new JComboBox<>(toppings);
 
@@ -51,7 +51,8 @@ public class JPizza extends JFrame implements ItemListener {
 
         if (Objects.equals(toppingsComboBox.getSelectedItem(), "Olives") ||
                 Objects.equals(toppingsComboBox.getSelectedItem(), "Jelly") ||
-                Objects.equals(toppingsComboBox.getSelectedItem(), "Sugar")) {
+                Objects.equals(toppingsComboBox.getSelectedItem(), "Sugar") ||
+                Objects.equals(toppingsComboBox.getSelectedItem(), "Chocolate")) {
             currentPrice += toppingPrice;
         }
         String totalPrice = "Total price is " + currentPrice;
