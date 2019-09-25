@@ -8,7 +8,11 @@ import java.awt.event.ActionListener;
 public class JFrameDisableButton extends JFrame implements ActionListener {
     private final int WIDTH = 400;
     private final int HEIGHT = 300;
+    private int clickCount = 0;
+
     JButton button = new JButton("Click Me");
+    JLabel label = new JLabel(  "That's Enough!");
+
 
     public JFrameDisableButton() {
         super("Disable Button");
@@ -16,18 +20,21 @@ public class JFrameDisableButton extends JFrame implements ActionListener {
         setLayout(new FlowLayout());
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        add(button);
         setVisible(true);
 
-        add(button);
         button.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        button.setEnabled(false);
-    }
+        clickCount += 1;
+        if (clickCount == 8) {
+            button.setEnabled(false);
+            add(label);
 
-    public static void main(String[] args) {
-        JFrameDisableButton frame = new JFrameDisableButton();
+            revalidate();
+            repaint();
+        }
     }
 }
