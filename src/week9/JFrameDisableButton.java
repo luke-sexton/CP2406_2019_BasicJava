@@ -37,4 +37,8 @@ public class JFrameDisableButton extends JFrame implements ActionListener {
             repaint();
         }
     }
+
+    public static void main(String[] args) {
+        JFrameDisableButton frame = new JFrameDisableButton();
+    }
 }
