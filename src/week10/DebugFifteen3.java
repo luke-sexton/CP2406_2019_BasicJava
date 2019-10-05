@@ -28,6 +28,8 @@ public class DebugFifteen3 extends JFrame implements KeyListener {
    public void keyTyped(KeyEvent e) {
       char c = e.getKeyChar();
       label.setText("Key Typed: " + c);
+      revalidate();
+      repaint();
    }
 
    @Override

@@ -39,16 +39,19 @@ public class DebugFifteen1 extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        if (source == button1)
+        if (source == button1) {
             panel2.setBackground(Color.RED);
-        else if (source == button2)
+        } else if (source == button2) {
             panel2.setBackground(Color.PINK);
-        else if (source == button3)
+        } else if (source == button3) {
             panel2.setBackground(Color.ORANGE);
-        else if (source == button4)
+        } else if (source == button4) {
             panel2.setBackground(Color.YELLOW);
-        else
+        } else {
             panel2.setBackground(Color.BLACK);
+        }
+        revalidate();
+        repaint();
     }
 
     public static void main(String[] args) {

@@ -49,19 +49,21 @@ public class DebugFifteen4 extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         String text = "  ";
-        if (source == exit)
+        if (source == exit) {
             System.exit(0);
-        else if (source == animal)
+        } else if (source == animal) {
             text = "The state animal is badger";
-        else if (source == song)
+        } else if (source == song) {
             text = "The state song is On Wisconsin!";
-        else if (source == flower)
+        } else if (source == flower) {
             text = "The state flower is wood violet";
-        else if (source == milwaukee)
+        } else if (source == milwaukee) {
             text = "Milwaukee is the largest city";
-        else
+        } else {
             text = "Madison is the capital";
+        }
         label2.setText(text);
+        revalidate();
         repaint();
     }
 
