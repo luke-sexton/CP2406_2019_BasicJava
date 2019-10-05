@@ -26,7 +26,6 @@ public class DebugFifteen1 extends JFrame implements ActionListener {
         panel1.add(button4);
         panel1.add(button5);
 
-
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);

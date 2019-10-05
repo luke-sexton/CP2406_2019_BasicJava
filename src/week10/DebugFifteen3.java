@@ -18,9 +18,11 @@ public class DebugFifteen3 extends JFrame implements KeyListener {
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(grid);
+
         con.add(textArea);
         con.add(label);
         textArea.addKeyListener(this);
+
         setVisible(true);
     }
 

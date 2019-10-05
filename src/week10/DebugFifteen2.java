@@ -17,11 +17,13 @@ public class DebugFifteen2 extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
         setLayout(new BorderLayout());
+
         con.add(nb, BorderLayout.WEST);
         con.add(sb, BorderLayout.SOUTH);
         con.add(eb, BorderLayout.EAST);
         con.add(wb, BorderLayout.CENTER);
         con.add(cb, BorderLayout.NORTH);
+
         setVisible(true);
     }
 
