@@ -34,28 +34,13 @@ public class JFontSelector extends JFrame implements ActionListener {
 
         add(buttonPanel);
 
-        buttons[0].setFont(fonts[0]);
-        buttons[1].setFont(fonts[1]);
-        buttons[2].setFont(fonts[2]);
-        buttons[3].setFont(fonts[3]);
-        buttons[4].setFont(fonts[4]);
+        for (JButton button : buttons) {
+            for (Font font : fonts) {
+                buttonPanel.add(button).setFont(font);
 
-        buttonPanel.add(buttons[0]);
-        buttonPanel.add(buttons[1]);
-        buttonPanel.add(buttons[2]);
-        buttonPanel.add(buttons[3]);
-        buttonPanel.add(buttons[4]);
-        buttonPanel.add(buttons[5]);
-        buttonPanel.add(buttons[6]);
-
-        buttons[0].addActionListener(this);
-        buttons[1].addActionListener(this);
-        buttons[2].addActionListener(this);
-        buttons[3].addActionListener(this);
-        buttons[4].addActionListener(this);
-        buttons[5].addActionListener(this);
-        buttons[6].addActionListener(this);
-
+            }
+            button.addActionListener(this);
+        }
         setVisible(true);
     }
 
