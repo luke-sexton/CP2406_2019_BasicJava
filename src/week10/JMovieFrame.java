@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 public class JMovieFrame extends JFrame implements ActionListener {
     private Container container;
-    private JLabel movieLabel = new JLabel("");
     private JButton northButton = new JButton("North to Alaska");
     private JButton eastButton = new JButton("Heroes of the East");
     private JButton southButton = new JButton("Song of the South");
@@ -33,36 +32,35 @@ public class JMovieFrame extends JFrame implements ActionListener {
         westButton.addActionListener(this);
         centerButton.addActionListener(this);
 
-        add(movieLabel);
-        movieLabel.setHorizontalAlignment(JLabel.CENTER);
-
         setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        StringBuilder details = new StringBuilder("Year Released: ");
-        String year = "", actorLabel = " Actor: ", actorName = "" ;
+        String releaseDate = "Year Released: ", year = "", actorLabel = " Actor: ", actorName = "" ;
 
         if (northButton.equals(source)) {
             year = "1991";
             actorName = "Whitey Willaby";
+            northButton.setText(releaseDate + year + actorLabel + actorName);
         } else if (eastButton.equals(source)) {
             year = "1992";
             actorName = "James Jimmy";
+            eastButton.setText(releaseDate + year + actorLabel + actorName);
         } else if (southButton.equals(source)) {
             year = "1993";
             actorName = "Jennifer Jane";
+            southButton.setText(releaseDate + year + actorLabel + actorName);
         } else if (westButton.equals(source)) {
             year = "1994";
             actorName = "Molly Moseby";
+            westButton.setText(releaseDate + year + actorLabel + actorName);
         } else if (centerButton.equals(source)) {
             year = "1995";
             actorName = "Benjamin Bingo";
+            centerButton.setText(releaseDate + year + actorLabel + actorName);
         }
-        details.append(year).append(actorLabel).append(actorName);
-        movieLabel.setText(String.valueOf(details));
         revalidate();
         repaint();
     }
