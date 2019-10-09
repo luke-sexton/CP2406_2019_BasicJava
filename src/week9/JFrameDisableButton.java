@@ -10,8 +10,8 @@ public class JFrameDisableButton extends JFrame implements ActionListener {
     private final int HEIGHT = 300;
     private int clickCount = 0;
 
-    JButton button = new JButton("Click Me");
-    JLabel label = new JLabel(  "That's Enough!");
+    private JButton button = new JButton("Click Me");
+    private JLabel label = new JLabel(  "That's Enough!");
 
 
     public JFrameDisableButton() {
