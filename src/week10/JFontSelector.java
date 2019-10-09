@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class JFontSelector extends JFrame implements ActionListener {
     private JPanel buttonPanel = new JPanel(new GridLayout(4, 2));
+    private int fontSize = 36;
 
     private JButton arialButton = new JButton("Arial");
     private JButton verdanaButton = new JButton("Verdana");
@@ -16,7 +17,6 @@ public class JFontSelector extends JFrame implements ActionListener {
     private JButton increaseSizeButton = new JButton(("Increase Font Size"));
     private JButton decreaseSizeButton = new JButton(("Decrease Font Size"));
 
-    private int fontSize = 12;
     private Font arialFont = new Font("Arial", Font.PLAIN, fontSize);
     private Font verdanaFont = new Font("Verdana", Font.PLAIN, fontSize);
     private Font helveticaFont = new Font("Helvetica", Font.PLAIN, fontSize);
@@ -32,7 +32,7 @@ public class JFontSelector extends JFrame implements ActionListener {
 
     public JFontSelector() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(800, 800);
 
         add(buttonPanel);
 
@@ -43,6 +43,8 @@ public class JFontSelector extends JFrame implements ActionListener {
             index += 1;
         }
 
+        buttons[5].setFont(arialFont);
+        buttons[6].setFont(arialFont);
         buttonPanel.add(buttons[5]);
         buttonPanel.add(buttons[6]);
         buttons[5].addActionListener(this);
