@@ -27,6 +27,8 @@ public class JFontSelector extends JFrame implements ActionListener {
             serifButton, courierButton, increaseSizeButton, decreaseSizeButton};
     private Font[] fonts = {arialFont, verdanaFont, helveticaFont, serifFont, courierFont};
 
+    private int index = 0;
+
 
     public JFontSelector() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,13 +36,17 @@ public class JFontSelector extends JFrame implements ActionListener {
 
         add(buttonPanel);
 
-        for (JButton button : buttons) {
-            for (Font font : fonts) {
-                buttonPanel.add(button).setFont(font);
-
-            }
-            button.addActionListener(this);
+        for (Font font : fonts) {
+            buttonPanel.add(buttons[index]);
+            buttons[index].setFont(font);
+            buttons[index].addActionListener(this);
+            index += 1;
         }
+
+        buttonPanel.add(buttons[5]);
+        buttonPanel.add(buttons[6]);
+        buttons[5].addActionListener(this);
+        buttons[6].addActionListener(this);
         setVisible(true);
     }
 
@@ -48,22 +54,20 @@ public class JFontSelector extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-
+        index = 0;
         if (buttons[5].equals(source)) { // increase font size
             fontSize += 2;
             for (Font font : fonts) {
-                for (int i = 0; i < buttons.length - 2; i++) {
-                    Font tempFont = font.deriveFont(Font.PLAIN, fontSize);
-                    buttons[i].setFont(tempFont);
-                }
+                Font tempFont = font.deriveFont(Font.PLAIN, fontSize);
+                buttons[index].setFont(tempFont);
+                index += 1;
             }
         } else if (buttons[6].equals(source)) { // decrease font size
             fontSize -= 2;
             for (Font font : fonts) {
-                for (int i = 0; i < buttons.length - 2; i++) {
-                    Font tempFont = font.deriveFont(Font.PLAIN, fontSize);
-                    buttons[i].setFont(tempFont);
-                }
+                Font tempFont = font.deriveFont(Font.PLAIN, fontSize);
+                buttons[index].setFont(tempFont);
+                index += 1;
             }
         }
         revalidate();
