@@ -35,6 +35,7 @@ public class DebugSixteen4 extends JPanel implements ActionListener {
         g.setFont(font);
         g.setColor(colors[cycle]);
         g.fillPolygon(xTop, yTop, 12);
+        g.setColor(Color.BLACK);
         g.drawString("Just look at the colors", X, y += GAP);
         g.drawString("in which you can buy", X, y += GAP);
         g.drawString("this beautiful shirt", X, y += GAP);
